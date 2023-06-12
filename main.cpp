@@ -1,4 +1,4 @@
-#define USE_EIGEN3
+// #define USE_EIGEN3
 #define PI 3.1415926
 
 #include <cstdio>
@@ -161,14 +161,14 @@ Quat mat_to_quat(Matrix3d m){
 
 void test(){
   Quat q1{1,2,3,4};
-  Quat q2({1,1,1}, PI/3);
+  // Quat q2({1,1,1}, PI/3);
 
   std::cout << "q1 = " << q1 << std::endl;
-  std::cout << "q2 = " << q2 << std::endl;
-  std::cout << "q1 + q2 = " << q1 + q2 << std::endl;
+  // std::cout << "q2 = " << q2 << std::endl;
+  // std::cout << "q1 + q2 = " << q1 + q2 << std::endl;
   std::cout << "12 * q1 = " << q1 * 12 << std::endl;
-  std::cout << "q1.normalize()" << q1.normalize() << " ==> mat: " << std::endl << q1.normalize().to_mat() << std::endl; 
-  std::cout << "mat_to_quat(q2.to__mat()): " << mat_to_quat(q1.normalize().to_mat()) << std::endl; 
+  // std::cout << "q1.normalize()" << q1.normalize() << " ==> mat: " << std::endl << q1.normalize().to_mat() << std::endl; 
+  // std::cout << "mat_to_quat(q2.to__mat()): " << mat_to_quat(q1.normalize().to_mat()) << std::endl; 
 }
 
 int main(){
