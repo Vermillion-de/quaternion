@@ -1,8 +1,10 @@
-# quaternion
+# Quaternion
 A bunch of note and code on the topic of Quaternion: applications in graphics and vision 
 
 ## Properities
-\[ **Definition** \]. A quaternion is a ring of number which can be written as
+
+#### \[Definition\]. 
+A quaternion is a ring of number which can be written as
 $$\mathbf{H} = \\{ x + y\mathbf{i} + z\mathbf{j} + w\mathbf{k} | x,y,z,w \in \mathbf{R} \\},$$
 where $\mathbf{i}, \mathbf{j}, \mathbf{k}$ are complex roots in terms of production, which safisfies 
 $$\mathbf{i}^2=\mathbf{j}^2=\mathbf{k}^2=-1,  \mathbf{i}\mathbf{j}=\mathbf{k}, \mathbf{j}\mathbf{k}=\mathbf{i},\mathbf{k}\mathbf{i}=\mathbf{j}.$$
@@ -29,7 +31,8 @@ So that, a quaternion can obtain its inverse apparently.
 $$\frac{\*p}{||p||^2} \times p = p \times \frac{\*p}{||p||^2} = 1, \Rightarrow p^{-1} = \frac{\*p}{||p||^2}.$$
 
 
-\[ **Vector Representation** \]. We denote a quaternion $q = x + y\mathbf{i} + z\mathbf{j} + w\mathbf{k} = x + \mathbf{v}$, where $\mathbf{v}$ can be viewed as a correspondence of $\mathbf{R}^3$. The initial benifit is the production of quaternions, 
+#### \[Vector Representation\]. 
+We denote a quaternion $q = x + y\mathbf{i} + z\mathbf{j} + w\mathbf{k} = x + \mathbf{v}$, where $\mathbf{v}$ can be viewed as a correspondence of $\mathbf{R}^3$. The initial benifit is the production of quaternions, 
 
 $$
 \begin{align}
@@ -41,7 +44,8 @@ $$
 And naturally, a vector from $\mathbf{R}^3$ can be embedded into $\mathbf{H}$, that $\forall (x,y,z) \in \mathbf{R}^3, H(x, y, z) = x\mathbf{i} + y\mathbf{j} + z\mathbf{k} \in \mathbf{H}$.
 
 
-\[ **Rotation** \]. Actually, every $q \in \mathbf{H}$ satisfies $||q||=1$ can represent a rotation map in $\mathbf{R}^3$ by given,
+#### \[Rotation\]. 
+Actually, every $q \in \mathbf{H}$ satisfies $||q||=1$ can represent a rotation map in $\mathbf{R}^3$ by given,
 
 $$\forall \mathbf{x} \in \mathbf{R}^3, \mbox{Rot}\[q\](\mathbf{x}) = q H(\mathbf{x}) q^{-1}.$$
 
