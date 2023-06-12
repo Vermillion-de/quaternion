@@ -1,4 +1,4 @@
 main
 */target/*
 */build/*
-*.egg-info/*
+*/Quat.egg-info/*
