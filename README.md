@@ -66,7 +66,7 @@ $$
 $$
 
 So that, 
-$$\mbox{Rot}\[q\] = \sin \theta \[\mathbf{v}\]_{\times}+(I-\mathbf{v}\mathbf{v}^T)\cos\theta.$$
+$$\mbox{Rot}\[q\] = \sin \theta \[\mathbf{v}\]_{\times}+(I-\mathbf{v}\mathbf{v}^T)\cos\theta + \mathbf{v}\mathbf{v}^T.$$
 
 Note that, $\mathbf{v}$ is a eigen value correspond to $\mbox{Rot}\[q\]$, so that $\forall \mathbf{R}\in \mathbf{O}(3)$, $\mathbf{v}$ can be computed by the null space of $\mbox{Rot}\[q\] - I$.
 
