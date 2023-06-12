@@ -74,12 +74,19 @@ Since then, there equation can be viewed as a linear equation to $\sin \theta, \
 
 
 ## Implementation
+\[**Environment**\]. We support `c++` and then bindings of `python`.
+```bash
+sudo apt install build-essential
+sudo apt install eigen3 # for eigen value computation
+pip install 'pybind11[global]'
+```
 
 ### C++ 
 
-### Rust
-
 ### Python Binding
+
+### Rust
+\[Under developing\].
 
 ## References
 * Wikipedia: [Quaternions](https://en.wikipedia.org/wiki/Quaternion), [Quaternions and saptial rotation](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation).
