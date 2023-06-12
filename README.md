@@ -53,6 +53,25 @@ The meaning behind it is, $\mathbf{t}$ is the unchanged vector in $\mbox{Rot}\[q
 
 And it is natual to to think of rotation matrices, here we explore the relation ship between the two objects.
 
+Suppose $q = \cos \frac{\theta}{2} + \sin \frac{\theta}{2} \mathbf{v}$, then $\forall \mathbf{x} = (x, y, z) \in \mathbf{R}^3$, here,
+
+$$
+\begin{align}
+\mbox{Rot}\[q\](x)  & = (\cos \frac{\theta}{2} + \sin \frac{\theta}{2} \mathbf{v}) \mathbf{x} (\cos \frac{\theta}{2} - \sin \frac{\theta}{2} \mathbf{v}) \\
+                    & = (\cos \frac{\theta}{2} + \sin \frac{\theta}{2} \mathbf{v}) (\sin \frac{\theta}{2} \langle \mathbf{x}, \mathbf{v} \rangle + \cos \frac{\theta}{2} \mathbf{x} + \sin \frac{\theta}{2} \mathbf{v} \wedge \mathbf{x}) \\ 
+                    & = \cos \frac{\theta}{2} \sin \frac{\theta}{2} \langle \mathbf{x}, \mathbf{v} \rangle - \langle \sin \frac{\theta}{2} \mathbf{v}, \cos \frac{\theta}{2} \mathbf{x} + \sin \frac{\theta}{2} \mathbf{v} \wedge \mathbf{x} \rangle
+                     + \sin^2 \frac{\theta}{2} \langle \mathbf{x}, \mathbf{v} \rangle \mathbf{v} + \cos^2 \frac{\theta}{2} \mathbf{x} + \cos \frac{\theta}{2} \sin \frac{\theta}{2} \mathbf{v} \wedge \mathbf{x} + \sin \frac{\theta}{2} \cos \frac{\theta}{2} \mathbf{v} \wedge \mathbf{x} + \sin^2 \frac{\theta}{2} \mathbf{v} \wedge (\mathbf{v} \wedge \mathbf{x})\\
+                    & = \sin \theta \mathbf{v} \wedge \mathbf{x} + \cos \theta \mathbf{x} + (1 - \cos\theta)\mathbf{v}\mathbf{v}^T\mathbf{x}.
+\end{align}
+$$
+
+So that, 
+$$\mbox{Rot}\[q\] = \sin \theta \[\mathbf{v}\]_{\times}+(I-\mathbf{v}\mathbf{v}^T)\cos\theta.$$
+
+Note that, $\mathbf{v}$ is a eigen value correspond to $\mbox{Rot}\[q\]$, so that $\forall \mathbf{R}\in \mathbf{O}(3)$, $\mathbf{v}$ can be computed by the null space of $\mbox{Rot}\[q\] - I$.
+
+Since then, there equation can be viewed as a linear equation to $\sin \theta, \cos \theta$.
+
 
 ## Implementation
 
