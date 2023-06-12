@@ -80,13 +80,18 @@ sudo apt install build-essential
 sudo apt install eigen3 # for eigen value computation
 pip install 'pybind11[global]'
 ```
+For `c++` implementation, you can use 
+```bash
+make
+```
+To compile the binary file, and we support `test`, `clean`, `python` options.
 
 ### C++ 
 
 ### Python Binding
 
 ### Rust
-\[Under developing\].
+\[Under developing\]. This could be super cool!
 
 ## References
 * Wikipedia: [Quaternions](https://en.wikipedia.org/wiki/Quaternion), [Quaternions and saptial rotation](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation).
