@@ -72,7 +72,7 @@ Note that, $\mathbf{v}$ is a eigen value correspond to $\mbox{Rot}\[q\]$, so tha
 
 Since then, there equation can be viewed as a linear equation to $\sin \theta, \cos \theta$.
 
-
+![](http://www.songho.ca/opengl/files/gl_quaternion01.png)
 ## Implementation
 \[**Environment**\]. We support `c++` and then bindings of `python`.
 ```bash
