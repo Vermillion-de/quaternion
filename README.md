@@ -53,7 +53,7 @@ The meaning behind it is, $\mathbf{t}$ is the unchanged vector in $\mbox{Rot}\[q
 
 And it is natual to to think of rotation matrices, here we explore the relation ship between the two objects.
 
-Suppose $q = \cos \frac{\theta}{2} + \sin \frac{\theta}{2} \mathbf{v}$, then $\forall \mathbf{x} = (x, y, z) \in \mathbf{R}^3$, here,
+Suppose $q = \cos \frac{\theta}{2} + \sin \frac{\theta}{2} \mathbf{v}$, then $\forall \mathbf{x} = (x, y, z)^T \in \mathbf{R}^3$, here,
 
 $$
 \begin{align}
