@@ -70,13 +70,13 @@ $$
 $$
 
 So that, 
-$$\mbox{Rot}\[q\] = \sin \theta \[\mathbf{v}\]_{\times}+(I-\mathbf{v}\mathbf{v}^T)\cos\theta + \mathbf{v}\mathbf{v}^T.$$
+$$\mbox{Rot}\[q\] = \sin \theta \[\mathbf{v}\]\_{\times}+(I-\mathbf{v}\mathbf{v}^T)\cos\theta + \mathbf{v}\mathbf{v}^T.$$
 
 Note that, $\mathbf{v}$ is a eigen value correspond to $\mbox{Rot}\[q\]$, so that $\forall \mathbf{R}\in \mathbf{O}(3)$, $\mathbf{v}$ can be computed by the null space of $\mbox{Rot}\[q\] - I$.
 
 Since then, there equation can be viewed as a linear equation to $\sin \theta, \cos \theta$.
 
-![](http://www.songho.ca/opengl/files/gl_quaternion01.png)
+![](./static/quaternion.png)
 
 ## Implementation
 \[**Environment**\]. We support `c++` and then bindings of `python`.
