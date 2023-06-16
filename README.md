@@ -79,21 +79,36 @@ Since then, there equation can be viewed as a linear equation to $\sin \theta, \
 ![](./static/quaternion.png)
 
 ## Implementation
-\[**Environment**\]. We support `c++` and then bindings of `python`.
+\[**Environment**\]. We support `c++, which depend on `eigen3` (but which can be replaced, for the main usage is the structure of vector, matrix and implementation of linear solver and eigen solver).
+
+The enironment is initially set on an `archlinux` machine, the procedure of setting environment could be,
 ```bash
-sudo apt install build-essential
-sudo apt install eigen3 # for eigen value computation
-pip install 'pybind11[global]'
+sudo pacman -S eigen3 g++ python3 
 ```
-For `c++` implementation, you can use 
-```bash
-make
-```
-To compile the binary file, and we support `test`, `clean`, `python` options.
+And for other systems (e.g. Ubuntu, MacOS, Windows), the environmet could be broken (solving currently), the `eigen3` in submodule is not working...
+
 
 ### C++ 
+For `c++` compilation, you can use 
+```bash
+make compile
+```
+To compile the binary file, and we support `clean` for remove, `all` for build and run (as test).
+
 
 ### Python Binding
+The python bnding is depended on `pybind11`, you can install it like,
+```bash
+python -m pip install  pybind11          ## install it
+python -m pip install 'pybind11[global]' ## install it system wide
+```
+And to run the installation, you should go to `python` directory by  `cd python`.
+and go with 
+```bash
+python -m pip install . --verbose ## of course if you want more details
+
+```
+Currently, this is quite troblesome... 
 
 ### Rust
 \[Under developing\]. This could be super cool!
@@ -103,3 +118,26 @@ To compile the binary file, and we support `test`, `clean`, `python` options.
 
 * Courses: [CMU15.462: Computer Graphics](http://15462.courses.cs.cmu.edu/fall2021/lecture/3drotations),
 [GAMES105](https://games-105.github.io/ppt/02%20-%20Math%20Background.pdf).
+
+* Blogs: []().
+
+## Resluts 
+This is a result of  `main.test()`.
+```c++
+q1 = (1,2i,3j,4k), norm = 5.47723
+q2 = (0.866025,0.288675i,0.288675j,0.288675k), norm = 1
+q1 + q2 = (1.86603,2.28868i,3.28868j,4.28868k)
+12 * q1 = (12,24i,36j,48k)
+q1.normalize()(0.182574,0.365148i,0.547723j,0.730297k)
+q2.to_mat(): m = 
+ 0.666667 -0.333333  0.666667
+ 0.666667  0.666667 -0.333333
+-0.333333  0.666667  0.666667
+
+m.T * m = 
+           1 -2.77556e-17 -2.77556e-17
+-2.77556e-17            1            0
+-2.77556e-17            0            1
+
+mat_to_quat(m): (0.866025,0.288675i,0.288675j,0.288675k)
+```
