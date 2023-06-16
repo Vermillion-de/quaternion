@@ -7,10 +7,7 @@ ext_modules = [
         Pybind11Extension(
             "Quat",
             ["./bind11.cpp"],
-            define_macros = [ 
-                             ("VERSION_INFO", __version__), 
-                             # ("USE_EIGEN3")
-                             ]
+            define_macros = [ ("VERSION_INFO", __version__), ]
         )
     ]
 
